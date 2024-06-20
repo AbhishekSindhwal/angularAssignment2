@@ -2,7 +2,7 @@
 
   <div class="header">
     <h2>Heading</h2>
-    <button mat-raised-button>Basic</button>
+    <button mat-raised-button>Add Job</button>
   </div>
   <div class="tagline">
     <h1>Add a Job</h1>
@@ -42,6 +42,20 @@
             <mat-radio-button value="2">Fixed</mat-radio-button>
             <mat-radio-button value="3">Monthly</mat-radio-button>
           </mat-radio-group>
+
+          <div>
+            <div>
+              <label for="">Amount</label>
+              <input type="number">
+            </div>
+            <div>
+              <label for="">Min</label>
+              <input type="number">
+              <label for="">Max</label>
+              <input type="number" >
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -69,23 +83,39 @@
 
       <div class="editor   heading">
         <label for="">Description</label>
-        <ckeditor [editor]="Editor" data="<p>Hello, world!</p>"></ckeditor>
+        <p-editor formControlName="text" [style]="{ height: '320px' }" />
       </div>
+
+
 
       <div class="addOns  heading">
         <label for="addOns">Add On</label>
-        <!-- <div *ngFor="let ele of addOns.controls; let i=index">
-          <div [formGroupName]="i">
-            <input type="text" formControlName="addOns" [(ngModel)]="addOns">
-            <button (click)="removeAddOn(i)">Remove</button>
-          </div>
+        <mat-checkbox [checked]="hideSingleSelectionIndicator()" (change)="toggleSingleSelectionIndicator()">
+        </mat-checkbox>
+        <div class="example-section" *ngIf="hideSingleSelectionIndicator()">
+          <mat-checkbox *ngFor="let element of addOns">{{ element.addOn }}</mat-checkbox>
         </div>
-        <button type="button" (click)="addAddOn()">Add</button> -->
+      </div>
+
+
+
+      <div class="additionalInformation heading">
+        <label for="">Additional Information</label>
+        <div formArrayName="user">
+          <div *ngFor="let user of user.controls; let i=index">
+            <div [formGroupName]="i">
+              <input type="text" formControlName="user">
+              <button (click)="removeUser(i)">Remove</button>
+            </div>
+          </div>
+          <button type="button" (click)="addUser()">Add</button>
+        </div>
+
       </div>
 
 
       <div class="button  heading">
-        <button type="submit" mat-flat-button >Basic</button>
+        <button type="submit" mat-flat-button>Submit</button>
       </div>
     </form>
   </div>

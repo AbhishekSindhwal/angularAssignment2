@@ -2,19 +2,19 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit,signal } from '@angular/core';
 import { FormsModule, ReactiveFormsModule, FormBuilder, FormGroup, FormArray, FormControl, Validators, Form } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
-import { TagInputModule } from 'ngx-chips';
-import { HttpClient } from '@angular/common/http';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {LiveAnnouncer} from '@angular/cdk/a11y';
-import {COMMA, ENTER} from '@angular/cdk/keycodes';
+import {COMMA, ENTER, Q} from '@angular/cdk/keycodes';
 import {ChangeDetectionStrategy, inject, } from '@angular/core';
 import {MatChipEditedEvent, MatChipInputEvent, MatChipsModule} from '@angular/material/chips';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
-import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import {MatButtonModule} from '@angular/material/button';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { EditorModule } from 'primeng/editor';
+
 
 export interface Skill {
   name: string;
@@ -32,11 +32,11 @@ export interface Skill {
     MatFormFieldModule, 
     MatChipsModule, 
     MatIconModule,
-    CKEditorModule,
-    MatButtonModule
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCheckboxModule,
+    EditorModule
     
-
-   
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -45,7 +45,6 @@ export interface Skill {
 export class AppComponent implements OnInit {
   title = 'assignment2';
   contactForm: FormGroup;
-
   categories = [
     { id: 1, name: "Project Manager" },
     { id: 2, name: "Developer" },
@@ -64,6 +63,10 @@ export class AppComponent implements OnInit {
       addOns: this.fb.array([
         new FormControl(null,),
       ]),
+      user:this.fb.array([
+        new FormControl(null,),
+      ]),
+      text: new FormControl(),
       level:['',Validators.required],
       payment:['',Validators.required]
 
@@ -73,9 +76,18 @@ export class AppComponent implements OnInit {
   ngOnInit() {
   }
 
+  //Code for ADD Ons (Toggle)
+  hideSingleSelectionIndicator = signal(false);
+  toggleSingleSelectionIndicator() {
+    this.hideSingleSelectionIndicator.update(value => !value);
+  }
 
-  //Code for the Editor
-  public Editor = ClassicEditor;
+
+  addOns=[
+  {addOn:"This is First Add On"},
+    {addOn:"This is Second Add On"},
+    {addOn:"This is third Add on"}
+  ]
 
 
 
@@ -109,7 +121,7 @@ export class AppComponent implements OnInit {
   add(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();
 
-    // Add our fruit
+    // Add our skill
     if (value) {
       this.skills.update(skills => [...skills, {name: value}]);
     }
@@ -134,13 +146,13 @@ export class AppComponent implements OnInit {
   edit(fruit: Skill, event: MatChipEditedEvent) {
     const value = event.value.trim();
 
-    // Remove fruit if it no longer has a name
+    // Remove Skill if it no longer has a name
     if (!value) {
       this.remove(fruit);
       return;
     }
 
-    // Edit existing fruit
+    // Edit existing Skill
     this.skills.update(skills => {
       const index = skills.indexOf(fruit);
       if (index >= 0) {
@@ -151,6 +163,19 @@ export class AppComponent implements OnInit {
     });
   }
 
+
+
+  //Additional Information
+
+  get user():FormArray{
+    return this.contactForm.get("user") as FormArray
+  }
+  addUser(){
+    this.user.push(new FormControl(null))
+  }
+  removeUser(i:number){
+    this.user.removeAt(i);
+  }
 
 
 
