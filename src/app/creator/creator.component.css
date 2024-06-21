@@ -1,0 +1,160 @@
+/* Material css for radio buttons */
+.mat-mdc-radio-button ~ .mat-mdc-radio-button {
+    margin-left: 16px;
+  }
+  
+  /* Material Css for chip(skills) */
+  .example-chip-list {
+    /* color: red; */
+    width: 100%;
+   
+  }
+  
+  /* Material css for button */
+  .mat-flat-button {
+    margin-top: 20px;
+  }
+  
+  /* Material css for add on */
+  .example-section {
+    margin: 12px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Vanilla Css */
+  .container {
+    background-color: #E7D4B5;
+    padding: 40px;
+  }
+  
+  .heading {
+    margin-top: 40px;
+    padding: 10px;
+  }
+  
+  .innerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;   
+  }
+  
+  .header {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 130px;
+    height:50px;
+    font-size: medium;
+    background-color: aliceblue;
+    cursor: pointer;
+    margin-right: 40px;
+  }
+  
+  .tagline {
+    color: white;
+    text-align: center;
+    margin-top: 150px;
+  }
+  
+  .form {
+    margin: 0 auto;
+    max-width: 1000px; 
+    background-color: white;
+    border-radius: 1%;
+    padding: 20px;
+  }
+  
+  label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+  
+  .input {
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; 
+    box-sizing: border-box; 
+  }
+  
+  .innerContainer .category,
+  .innerContainer .level,
+  .innerContainer .title,
+  .innerContainer .payment {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .innerContainer .category select,
+  .innerContainer .title input,
+  .innerContainer .payment input {
+    margin-top: 8px; 
+  }
+  
+  .skills .example-chip-list {
+    margin-top: 8px; 
+  }
+  
+  .editor {
+    margin-top: 20px; 
+  }
+  
+   .addOns {
+    margin-top: 20px; 
+  }
+  
+  .additionalInformation {
+    margin-top: 20px; 
+  }
+  
+  .additionalInformation input {
+    margin-top: 8px; 
+    width: calc(100% - 100px); 
+  }
+  
+
+
+  
+  .additionalInformation button {
+    margin-left: 10px; 
+  }
+  
+
+ 
+  button[type="submit"] {
+    display: block;
+    margin: 20px auto 0; 
+    padding: 10px 20px;
+    font-size: 1.1rem;
+  }
+  
+  /* New CSS for Min and Max input fields */
+  .min-max-container {
+    display: flex;
+    gap: 20px; /* Adds space between the min and max fields */
+    margin-top: 8px;
+  }
+  
+  .min-max-container div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .min-max-container label {
+    margin-bottom: 4px; /* Adds space between the label and the input */
+  }
+  
+  
+  

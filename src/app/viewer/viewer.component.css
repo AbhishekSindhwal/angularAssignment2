@@ -1,0 +1,38 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #E7D4B5 ;
+    position: absolute;
+}
+.innerContainer{
+    position: relative;
+    margin: 50px 200px;
+    margin-top: 50px;
+    background-color: white;
+}
+
+.title,.level,.payment{
+    display: flex;
+    justify-content: center ;
+}
+
+.btn {
+    width: 130px;
+    height:50px;
+    font-size: medium;
+    background-color: #E7D4B5;
+    cursor: pointer;
+    margin-right: 40px;
+  }
+  
+
+.header,.about,.apply{
+    /* display: flex; */
+    /* margin:30px 50px ; */
+    padding: 0px 120px 10px;
+    justify-content: space-between;
+}
+.innerHeader{
+    display: flex;
+    justify-content: space-between;
+}
