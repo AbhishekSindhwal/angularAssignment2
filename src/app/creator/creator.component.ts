@@ -59,7 +59,11 @@ export class CreatorComponent  implements OnInit {
       ]),
       text: new FormControl(),
       level:['',Validators.required],
-      paymentType:['0',Validators.required]
+      paymentType:['0',Validators.required],
+      amount:[''],
+      min:[],
+      max:[]
+
     });
   }
 

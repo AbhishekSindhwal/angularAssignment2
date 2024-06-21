@@ -15,5 +15,6 @@ export class ViewerComponent {
 
   jobTitle="Developer"
   level="Fresher"
-  payment="₹12345"
+  payment=" ₹12345/M"
+  description= "This is the description about the job. This is the description This is the description This is the descriptionThis is the description  This is the description This is the description This is the description"
 }

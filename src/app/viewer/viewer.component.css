@@ -1,3 +1,9 @@
+textarea {
+    width: 1000px; /* Set the desired width */
+    height: 200px; /* Set the desired height */
+    font-size: 16px; /* Optional: Increase the font size for better readability */
+  }
+
 .container{
     width: 100vw;
     height: 100vh;
@@ -16,6 +22,9 @@
     justify-content: center ;
 }
 
+.about p{
+    width:1000px;
+}
 .btn {
     width: 130px;
     height:50px;

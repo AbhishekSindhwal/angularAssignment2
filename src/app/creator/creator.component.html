@@ -46,14 +46,14 @@
   
             <div>
               <div *ngIf= " paymentType == '2' ||paymentType == '1'">
-                <label for="">Amount</label>
-                <input type="number">
+                <label for="amount">Amount</label>
+                <input class="input" type="number" formControlName="amount">
               </div>
               <div *ngIf=" paymentType == '3'">
                 <label for="min">Min</label>
-                <input type="number" name="min"><br/>
+                <input class="input" type="number" formControlName="min"><br/>
                 <label for="max">Max</label>
-                <input type="number" name="max">
+                <input class="input" type="number" formControlName="max">
               </div>
             </div>
   
@@ -104,18 +104,18 @@
           <label for="">Additional Information</label>
           <div formArrayName="additionalInfo">
             <div *ngFor="let ele of additionalInfo.controls; let i=index">
-              <div [formGroupName]="i">
+              <div class="rm" [formGroupName]="i">
                 <input  type="text" formControlName="i">
-                <button (click)="removeInfo(i)" >Remove</button>
+                <button type="button" (click)="removeInfo(i)" >Remove</button>
               </div>
             </div>
-            <button type="button"  mat-flat-button (click)="addInfo()">Add</button>
+            <button type="button"   (click)="addInfo()">Add</button>
           </div>
         </div>
   
   
         <div class="button  heading">
-          <button type="submit" mat-flat-button>Submit</button>
+          <button type="submit" >Submit</button>
         </div>
       </form>
     </div>
