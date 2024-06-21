@@ -1,47 +1,101 @@
-textarea {
-    width: 1000px; /* Set the desired width */
-    height: 200px; /* Set the desired height */
-    font-size: 16px; /* Optional: Increase the font size for better readability */
-  }
-
-.container{
-    width: 100vw;
-    height: 100vh;
-    background-color: #E7D4B5 ;
-    position: absolute;
-}
-.innerContainer{
-    position: relative;
-    margin: 50px 200px;
-    margin-top: 50px;
-    background-color: white;
-}
-
-.title,.level,.payment{
-    display: flex;
-    justify-content: center ;
-}
-
-.about p{
-    width:1000px;
-}
-.btn {
-    width: 130px;
-    height:50px;
-    font-size: medium;
-    background-color: #E7D4B5;
-    cursor: pointer;
-    margin-right: 40px;
+/* job.component.css */
+/* General Styles */
+:host {
+    display: block;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
   }
   
-
-.header,.about,.apply{
-    /* display: flex; */
-    /* margin:30px 50px ; */
-    padding: 0px 120px 10px;
-    justify-content: space-between;
-}
-.innerHeader{
+  /* Container */
+  .container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #E7D4B5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .innerContainer {
+    width: 80%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header, .about, .apply {
+    padding: 20px;
+  }
+  
+  /* Header */
+  .header .title {
     display: flex;
     justify-content: space-between;
-}
+    align-items: center;
+  }
+  
+  .header .innerHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .header h1, .header h3 {
+    margin: 0;
+    padding: 0 10px;
+    color: #333;
+  }
+  
+  /* About Section */
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .about h3 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .about-job p {
+    width: calc(100% - 40px); /* Reduce width by 40px for padding */
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  /* Proposal Section */
+  .about-user textarea {
+    width: calc(100% - 40px); /* Reduce width by 40px for padding */
+    height: 200px;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+    resize: vertical;
+  }
+  
+  /* Apply Button */
+  .apply {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .btn {
+    width: 150px;
+    height: 50px;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+    color: white;
+  }
+  
