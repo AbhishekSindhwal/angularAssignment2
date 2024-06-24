@@ -223,6 +223,9 @@ button[type="submit"] {
 .innerContainer.container2 .payment input {
   width: auto;
 }
+.add-btn{
+  width: 150px;
+}
 
 @media (max-width: 768px) {
   .innerContainer.container2 {
