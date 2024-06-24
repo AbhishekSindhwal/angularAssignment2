@@ -1,16 +1,16 @@
 /* job.component.css */
 /* General Styles */
-:host {
-    display: block;
+/* :host {
+
     font-family: Arial, sans-serif;
     box-sizing: border-box;
   }
-  
+   */
   /* Container */
-  .container {
+  /* .container {
     width: 100vw;
     height: 100vh;
-    background-color: #E7D4B5;
+    background-color: #071952;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,10 +28,13 @@
     padding: 20px;
   }
   
-  /* Header */
+  .payment,.level{
+    display: flex   ;
+  }
+  
   .header .title {
     display: flex;
-    justify-content: space-between;
+    
     align-items: center;
   }
   
@@ -47,27 +50,29 @@
     color: #333;
   }
   
-  /* About Section */
+  
   .about {
     display: flex;
+    padding: 20px;
     flex-direction: column;
     gap: 20px;
   }
   
   .about h3 {
-    margin-bottom: 10px;
+    
+    margin: 0;
+    padding: 0 10px;
     color: #333;
   }
   
   .about-job p {
-    width: calc(100% - 40px); /* Reduce width by 40px for padding */
-    padding: 10px;
+    width: calc(100% - 40px); 
+    padding: 15px;
     font-size: 16px;
   }
   
-  /* Proposal Section */
   .about-user textarea {
-    width: calc(100% - 40px); /* Reduce width by 40px for padding */
+    width: calc(100% - 40px); 
     height: 200px;
     padding: 10px;
     border: none;
@@ -76,7 +81,7 @@
     resize: vertical;
   }
   
-  /* Apply Button */
+  
   .apply {
     display: flex;
     justify-content: center;
@@ -86,7 +91,7 @@
     width: 150px;
     height: 50px;
     font-size: 1rem;
-    background-color: #007BFF;
+    background-color: #071952;
     color: white;
     cursor: pointer;
     border: none;
@@ -97,5 +102,155 @@
   .btn:hover {
     background-color: #0056b3;
     color: white;
+  } */
+
+
+  /* General Styles */
+:host {
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Container */
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #071952;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.innerContainer {
+  width: 80%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sections */
+.header, .about, .apply {
+  padding: 20px;
+}
+
+.payment, .level {
+  display: flex;
+}
+
+/* Header */
+.header .title {
+  display: flex;
+  align-items: center;
+}
+
+.header .innerHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.header h1, .header h3 {
+  margin: 0;
+  padding: 0 10px;
+  color: #333;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about h3 {
+  margin: 0;
+  padding: 0 10px;
+  color: #333;
+}
+
+.about-job p {
+  margin: 0;
+  padding: 15px 10px;
+  font-size: 16px;
+}
+
+/* Proposal Section */
+.about-user textarea {
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  resize: vertical;
+}
+
+/* Apply Button */
+.apply {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  width: 150px;
+  height: 50px;
+  font-size: 1rem;
+  background-color: #071952;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .innerContainer {
+      width: 90%;
+      padding: 10px;
   }
+
+  .header .innerHeader {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .about h3, .about-job p, .about-user textarea {
+      padding: 10px 5px;
+  }
+
+  .btn {
+      width: 100%;
+      height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .innerContainer {
+      width: 100%;
+      padding: 10px;
+  }
+
+  .header .title {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .header .innerHeader {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .btn {
+      width: 100%;
+      height: 40px;
+  }
+}
+
   

@@ -2,7 +2,7 @@
 
   <div class="header">
     <h1>Heading</h1>
-    <button class="btn" mat-raised-button>Add Job</button>
+    <button class="btn" >Add Job</button>
   </div>
   <div class="tagline">
     <h1>Add a Job</h1>
@@ -11,7 +11,7 @@
 
     <form [formGroup]="contactForm" (ngSubmit)="submit()">
 
-      <div class="innerContainer  heading">
+      <div class="innerContainer container2  heading">
         <div class="category">
           <label for="category">Category:</label>
           <select class="input" formControlName="category">
@@ -29,20 +29,18 @@
         </div>
       </div>
 
-      <div class="innerContainer container2   heading">
+      <!-- <div class="innerContainer container2   heading">
         <div class="title">
           <label for="title">Title:</label>
           <input class="input" type="text" formControlName="title" id="">
         </div>
         <div class="payment">
           <label for="payment">Payment</label>
-
           <mat-radio-group aria-label="Select an option" formControlName="paymentType">
             <mat-radio-button value="1">Hourly</mat-radio-button>
             <mat-radio-button value="2">Fixed</mat-radio-button>
             <mat-radio-button value="3">Monthly</mat-radio-button>
           </mat-radio-group>
-
           <div>
             <div *ngIf=" paymentType == '2' ||paymentType == '1'">
               <label for="amount">Amount</label>
@@ -55,9 +53,43 @@
               <input class="input" type="number" formControlName="max">
             </div>
           </div>
-
         </div>
-      </div>
+      </div> -->
+
+      <div class="innerContainer container2 heading">
+        <div class="title">
+            <label for="title">Title:</label>
+            <input class="input" type="text" formControlName="title" id="">
+        </div>
+        <div class="payment">
+            <label for="payment">Payment</label>
+            <mat-radio-group aria-label="Select an option" formControlName="paymentType">
+                <mat-radio-button value="1">Hourly</mat-radio-button>
+                <mat-radio-button value="2">Fixed</mat-radio-button>
+                <mat-radio-button value="3">Monthly</mat-radio-button>
+            </mat-radio-group>
+            <div>
+                <div *ngIf="paymentType == '2' || paymentType == '1'">
+                    <label for="amount">Amount</label>
+                    <input class="input" type="number" formControlName="amount">
+                </div>
+                <div *ngIf="paymentType == '3'">
+                    <div class="min-max-container">
+                        <div>
+                            <label for="min">Min</label>
+                            <input class="input" type="number" formControlName="min">
+                        </div>
+                        <div>
+                            <label for="max">Max</label>
+                            <input class="input" type="number" formControlName="max">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
 
 
       
