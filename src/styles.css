@@ -16,3 +16,26 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
         background-color: #fff !important;
     }
 }
+
+
+
+.mat-accent.mat-mdc-checkbox {
+    --mdc-checkbox-selected-checkmark-color: #ffffff;
+    --mdc-checkbox-selected-focus-icon-color: #071952;
+    --mdc-checkbox-selected-hover-icon-color: #071952;
+    --mdc-checkbox-selected-icon-color: #071952;
+    --mdc-checkbox-selected-focus-state-layer-color: #071952;
+    --mdc-checkbox-selected-hover-state-layer-color: #071952;
+    --mdc-checkbox-unselected-pressed-state-layer-color: #071952;
+    --mat-checkbox-disabled-label-color: rgba(26, 27, 31, 0.38);
+    --mat-checkbox-label-text-color: #1a1b1f;
+}
+
+
+.mat-accent.mat-mdc-radio-button {
+    /* --mdc-radio-selected-focus-icon-color: #071952; */
+    --mdc-radio-selected-hover-icon-color: #071952;
+    --mdc-radio-selected-icon-color: #071952;
+    --mdc-radio-selected-pressed-icon-color: #071952;
+    --mat-radio-checked-ripple-color: #071952;
+}
