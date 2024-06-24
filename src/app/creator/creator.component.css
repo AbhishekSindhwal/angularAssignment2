@@ -1,13 +1,3 @@
-
-
-
-
-
-
-
-
-
-
 /* General Styles */
 :host {
   font-family: Arial, sans-serif;
@@ -89,12 +79,19 @@
   padding: 20px;
 }
 
+/* mat-chip-row :hover{
+  position: relative;
+  left: 20px;
+} */
 label {
   font-size: 1.2rem;
   font-weight: lighter;
   margin-right: 0.5rem;
 }
-
+.category,.title{
+  position: relative;
+  bottom: 30px;
+}
 .input {
   font-size: 1.1rem;
   padding: 0.5rem;
@@ -168,6 +165,10 @@ label {
   cursor: pointer;
   border-radius: 4px;
 }
+/* mat-radio-group{
+  display: flex;
+  justify-content: space-evenly;
+} */
 
 button[type="submit"] {
   display: block;

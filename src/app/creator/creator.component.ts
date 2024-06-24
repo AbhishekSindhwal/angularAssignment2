@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit,signal } from '@angular/core';
 import { FormsModule, ReactiveFormsModule, FormBuilder, FormGroup, FormArray, FormControl, Validators, Form } from '@angular/forms';
-
 import {MatRadioModule} from '@angular/material/radio';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {LiveAnnouncer} from '@angular/cdk/a11y';
@@ -119,7 +118,6 @@ export class CreatorComponent  implements OnInit {
 
   
   //Code for chip Angular Material
-
   readonly addOnBlur = true;
   readonly separatorKeysCodes = [ENTER, COMMA] as const;
   readonly skills = signal<Skill[]>([]);
@@ -174,7 +172,6 @@ export class CreatorComponent  implements OnInit {
 
 
   //Additional Information
-
   get additionalInfo():FormArray{
     return this.contactForm.get("additionalInfo") as FormArray
   }
@@ -188,7 +185,6 @@ export class CreatorComponent  implements OnInit {
     this.additionalInfo.removeAt(i);
   }
   
-
   //Code for form submission
   submit() {
     console.log("Form Submitted")
