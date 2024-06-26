@@ -173,7 +173,7 @@ label {
 button[type="submit"] {
   display: block;
   margin: 20px auto 0;
-  padding: 10px 20px;
+  padding: 10px 20px;  
   font-size: 1.1rem;
   background-color: #071952;
   color: white;
